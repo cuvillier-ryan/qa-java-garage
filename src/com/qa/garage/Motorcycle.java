@@ -1,7 +1,7 @@
 package com.qa.garage;
 
 public class Motorcycle extends Vehicle {
-	
+
 	private String engineType;
 
 	public Motorcycle() {
@@ -9,13 +9,26 @@ public class Motorcycle extends Vehicle {
 		this.engineType = "???";
 	};
 
-	public Motorcycle(String make, String model, double price, String engineType) {
-		super(make, model, price);
+	public Motorcycle(int id, String make, String model, double price, String engineType) {
+		super(id, make, model, price);
 		this.engineType = engineType;
 	}
-	
-	
-	
-	
+
+	@Override
+	public void honk() {
+		System.out.println("Tuut tuut!");
+		
+	}
+
+	@Override
+	public void accelerate() {
+		System.out.println("Accelerating");
+
+	}
+
+	@Override
+	public void brake() {
+		System.out.println("Braking");
+	}
 
 }
